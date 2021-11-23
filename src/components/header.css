@@ -1,0 +1,42 @@
+
+#header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    place-items: center;
+    z-index: 2;
+    background: linear-gradient(rgba(20, 20, 20, 0.7), rgba(20, 20, 20, 0));
+    transition-timing-function: ease-in;
+    transition: all 0.5s;
+
+}
+#header .opaque {
+    background: #141414;
+}
+
+#header > .header_panel {
+    display: flex;
+    align-items: center;
+}
+#header > .header_panel > .App-logo {
+    width: 5.8rem;
+    margin: 1.35rem 2rem 0.5rem 3.6rem;
+    object-fit: contain;
+    cursor: pointer;
+}
+#header > .header_panel > p {
+    font-weight: normal;
+    font-size: 0.85rem;
+    font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;;
+    letter-spacing: 0.32px;
+    color: white;
+    margin: 1.35rem 0.5rem 0.5rem 0.8rem;
+    line-height: 1.2;
+    cursor: pointer;
+}
+#header > .header_panel > .selected{
+    font-weight: bold;
+}
+
