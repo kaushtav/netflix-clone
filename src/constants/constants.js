@@ -1,3 +1,7 @@
+import iMac from '../assets/images/features/home-imac.jpg'
+import TV from '../assets/images/features/home-tv.jpg'
+import Mobile from '../assets/images/features/home-mobile.jpg'
+
 export const IMAGE_BASE_URL = 'https://image.tmdb.org/t/p/';
 export const IMAGE_SIZES = {
     backdrop: {
@@ -69,7 +73,7 @@ export const FEATURES = [
         title: 'Enjoy on your TV.',
         description: 'Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.',
         video: '',
-        image: '/images/misc/Home-TV.jpg',
+        image:TV,
         alt: 'Netflix on TV'
     },
     {
@@ -77,7 +81,7 @@ export const FEATURES = [
         title: 'Download your shows to watch offline.',
         description: 'Save your favorites easily and always have something to watch.',
         video: '',
-        image: '/images/misc/Home-Mobile.jpg',
+        image: Mobile,
         alt: 'Netflix on mobile',
         direction: 'row-reverse'
     },
@@ -85,7 +89,7 @@ export const FEATURES = [
         id: 3,
         title: 'Watch everywhere.',
         description: 'Stream unlimited movies and TV shows on your phone, tablet, laptop and TV without paying more.',
-        image: '/images/misc/Home-IMac.jpg',
+        image: iMac,
         alt: 'Netflix on different devices'
     }
 ];
@@ -97,15 +101,13 @@ export const FOOTER_LINKS = [
     { id: 4, text: 'Media Center', url: 'https://media.netflix.com/' },
     { id: 5, text: 'Investor Relations', url: 'https://ir.netflix.com/' },
     { id: 6, text: 'Jobs', url: 'https://jobs.netflix.com/jobs' },
-    { id: 7, text: 'Redeem Gift Cards', url: 'https://www.netflix.com/redeem' },
-    { id: 8, text: 'Buy Gift Cards', url: 'https://www.netflix.com/gift-cards' },
-    { id: 9, text: 'Ways to Watch', url: 'https://www.netflix.com/watch' },
-    { id: 10, text: 'Terms of Use', url: 'https://help.netflix.com/legal/termsofuse' },
-    { id: 11, text: 'Privacy', url: 'https://help.netflix.com/legal/privacy' },
-    { id: 12, text: 'Cookie Preferences', url: 'https://www.netflix.com/ph/#' },
-    { id: 13, text: 'Corporate Information', url: 'https://help.netflix.com/legal/corpinfo' },
-    { id: 14, text: 'Contact Us', url: 'https://help.netflix.com/contactus' },
-    { id: 15, text: 'Speed Test', url: 'https://fast.com/' },
-    { id: 16, text: 'Legal Notices', url: 'https://help.netflix.com/legal/notices' },
-    { id: 17, text: 'Netflix Originals', url: 'https://www.netflix.com/ph/browse/genre/839338' }
+    { id: 7, text: 'Ways to Watch', url: 'https://www.netflix.com/watch' },
+    { id: 8, text: 'Terms of Use', url: 'https://help.netflix.com/legal/termsofuse' },
+    { id: 9, text: 'Privacy', url: 'https://help.netflix.com/legal/privacy' },
+    { id: 10, text: 'Cookie Preferences', url: 'https://www.netflix.com/ph/#' },
+    { id: 11, text: 'Corporate Information', url: 'https://help.netflix.com/legal/corpinfo' },
+    { id: 12, text: 'Contact Us', url: 'https://help.netflix.com/contactus' },
+    { id: 13, text: 'Speed Test', url: 'https://fast.com/' },
+    { id: 14, text: 'Legal Notices', url: 'https://help.netflix.com/legal/notices' },
+    { id: 15, text: 'Netflix Originals', url: 'https://www.netflix.com/ph/browse/genre/839338' }
 ];

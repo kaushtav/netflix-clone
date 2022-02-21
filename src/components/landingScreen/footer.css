@@ -1,0 +1,23 @@
+.landingScreen__footer {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    width: 60vw;
+    padding: 0 20vw 20px 20vw;
+}
+.landingScreen__footer > p {
+    color: #757575;
+}
+.landingScreen__footerLinks {
+    display: inline-flex;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 25px 0;
+}
+.landingScreen__footerLinks > a{
+    width: 15vw;
+    margin: 8px 0;
+    color: #757575;
+    text-decoration: none;
+    font-size: 0.8rem;
+}

@@ -40,10 +40,10 @@ export const PlayerContextProvider = (props) => {
             playing: undefined,
             detailsTrailer: null,
             muted: true,
-            category: 'series',
+            category: 'movies',
             heroTrailer: null,
             trailerDisplayed: null,
-            genres: null,
+            genres: [],
     }
     const [state, dispatch] = useReducer(reducer, initialState);
     const setPlaying = (value) => {

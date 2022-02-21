@@ -1,12 +1,14 @@
 import React, {useEffect, useState, Fragment, useRef} from "react";
-
+import VolumeOffOutlinedIcon from '@material-ui/icons/VolumeOffOutlined';
+import VolumeUpOutlinedIcon from '@material-ui/icons/VolumeUpOutlined';
 import PlayArrowIcon from '@material-ui/icons/PlayArrow';
 import InfoOutlinedIcon from '@material-ui/icons/InfoOutlined';
 import ReactPlayer from "react-player";
 import './banner.css'
-import {sections} from "../api/movieEndPoints";
-import {instance} from "../api";
-import {usePlayer} from "../context/playerContext";
+import {sections} from "../../api/movieEndPoints";
+import {instance} from "../../api";
+import {usePlayer} from "../../context/playerContext";
+import {useNavigate} from "react-router-dom";
 export const PLAYER_CONFIG = {
     youtube: {
         playerVars: {
@@ -15,16 +17,19 @@ export const PLAYER_CONFIG = {
         }
     }
 };
+const truncate = (string, length) => {
+    return string.length > length ? string.substring(0, length - 1) + '...' : string;
+};
 
 const Banner = ({profile}) => {
     const playerRef = useRef();
+    const navigate = useNavigate()
     const [banner,setBanner] = useState(null);
     const {
         category,
-        playing,
         setPlaying,
         muted,
-        detailsTrailer,
+        setMuted,
         heroTrailer,setHeroTrailer
     } = usePlayer();
     const windowWidth = window.innerWidth;
@@ -76,20 +81,20 @@ const Banner = ({profile}) => {
           {banner&&(
               <Fragment>
                   {banner.backdrop_path && !heroTrailer && (
-                      <div id={'banner_banner'} style={{background:`linear-gradient(rgba(220,20,20,0) 60%, rgba(20,20,20,0.95)), url('https://image.tmdb.org/t/p/original${banner.backdrop_path}') center`}}/>
+                      <div id={'banner_banner'} style={{background:`linear-gradient(rgba(20,20,20,0.6), rgba(20,20,20,0.95)), url('https://image.tmdb.org/t/p/original${banner.backdrop_path}') center`}}/>
                   )}
                   {banner.overview && (
                       <div id={'banner_details'} className={heroTrailer ? 'no-desc' : ''}>
                            <h1 className={!heroTrailer ? 'title-small' : ''}>{banner.name||banner.title}</h1>
                           {!heroTrailer && windowWidth > 600 && (
                               <div id={'banner_description'}>
-                                  {banner.overview}
+                                  {truncate(banner.overview,180)}
                               </div>
                           )}
                           <div id={'buttons'}>
-                              <div className={'banner_button_white'} onClick={() => {
+                              <div className={'banner_button white'} onClick={() => {
                                   setHeroTrailer();
-                                  setPlaying(banner);
+                                  navigate('/play')
                               }}>
                                   <PlayArrowIcon/>
                                 <span>Play</span>
@@ -99,13 +104,21 @@ const Banner = ({profile}) => {
                                   setPlaying(banner);
                               }}>
                                   <InfoOutlinedIcon/>
-                                  <span>{'    '}More info</span>
+                                  <span>More info</span>
                               </div>
                           </div>
-                      </div>
-                  )
 
-                  }
+                      </div>
+                  )}
+
+                  {heroTrailer&&<div id={'browseScreen__BannerMuteContainer'} className={'browseScreen__BannerMuteContainer'}
+                        onClick={(e) => {
+                            e.preventDefault()
+                            e.stopPropagation()
+                            setMuted(!muted)
+                        }}>
+                      {muted ? <VolumeOffOutlinedIcon/> : <VolumeUpOutlinedIcon/>}
+                  </div>}
               </Fragment>
           )}
       </div>

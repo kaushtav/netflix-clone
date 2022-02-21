@@ -1,0 +1,58 @@
+.landingScreen__banner {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+}
+.landingScreen__banner > p {
+    color: white;
+    margin: 10px;
+}
+.landingScreen__banner >  .h1{
+    font-weight: bold;
+    font-size: 3.125rem;
+    width:40vw;
+    min-width: 600px;
+    text-align: center;
+    font-family: "Helvetica Neue",sans-serif;
+}
+.landingScreen__banner >  .h2{
+    font-size: 2rem;
+    font-weight: 400;
+    font-family: "Helvetica Neue",sans-serif;
+    min-width: 400px;
+    text-align: center;
+}
+.landingScreen__banner >  .h3{
+    font-size: 1.2rem;
+    font-weight: 400;
+    font-family: "Helvetica Neue",sans-serif;
+    min-width: 700px;
+    text-align: center;
+
+}
+.landingScreen__login > form {
+    display: flex;
+    align-items: center;
+}
+.landingScreen__login > form> input {
+    padding: 10px;
+    height: 30px;
+    width: 35vw;
+    max-width: 600px;
+    border: none;
+    outline: none;
+    border-radius: 5px 0 0 5px;
+}
+.landingScreen__login > form > button {
+    color: white;
+    height: 50px;
+    background-color: #e50914;
+    border: none;
+    font-size: 1.5rem;
+    border-radius: 0 5px 5px 0;
+    padding:10px 25px;
+    cursor: pointer;
+}

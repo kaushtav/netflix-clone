@@ -1,0 +1,27 @@
+
+.signupScreen__header {
+    height: 10vh;
+    margin-bottom: -10vh;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    overflow: visible;
+    background-color: transparent;
+}
+.signupScreen__header > .app_logo {
+    width: 10rem;
+    margin: 1.35rem 2rem 0.5rem 3rem;
+    object-fit: contain;
+    cursor: pointer;
+    z-index: 20;
+}
+.signin_button{
+    color: white;
+    font-size: 1rem;
+    background-color: #e50914;
+    padding: 8px 17px;
+    margin: 1.65rem 3.5rem 0.5rem 3.5rem;
+    border-radius: 3px;
+    cursor: pointer;
+}
+

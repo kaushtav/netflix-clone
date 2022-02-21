@@ -1,0 +1,9 @@
+{
+  "projects": {
+    "default": "netflix-clone-40b7c",
+  "hosting": {
+      "site": "netflix-clone-40b7c",
+      "public": "public"
+    }
+  }
+}

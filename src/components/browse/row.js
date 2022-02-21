@@ -1,11 +1,9 @@
 import React, {useEffect, useState} from "react";
-import {fetchData} from "../api";
+import {fetchData} from "../../api";
 import Show from "./show";
 import './row.css';
 
 const Row = ({index, title, request, size}) => {
-    console.log(index===0?'not':'down')
-    console.log(index)
     const [movies, setMovies] = useState([])
     useEffect(
         () => {
@@ -21,7 +19,7 @@ const Row = ({index, title, request, size}) => {
                {
                    movies.map((show)=>{
                        return(
-                           <Show show={show} size={size} key={show.id}/>
+                           <Show show={show} size={size} key={show.id} section={title}/>
                        )
                    })
                }

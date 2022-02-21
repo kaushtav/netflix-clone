@@ -1,0 +1,124 @@
+
+#header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    place-items: center;
+    z-index: 2;
+    background: linear-gradient(rgba(20, 20, 20, 0.7), rgba(20, 20, 20, 0));
+    transition-timing-function: ease-in;
+    transition: all 0.5s;
+
+}
+#header.opaque {
+    background: #141414;
+}
+
+#header > .header_panel {
+    display: flex;
+    align-items: center;
+}
+#header > .header_panel > .App-logo {
+    width: 5.8rem;
+    margin: 1.35rem 2rem 0.5rem 3.6rem;
+    object-fit: contain;
+    cursor: pointer;
+}
+#header > .header_panel > p {
+    font-weight: normal;
+    font-size: 0.85rem;
+    font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;;
+    letter-spacing: 0.32px;
+    color: white;
+    margin: 1.35rem 0.5rem 0.5rem 0.8rem;
+    line-height: 1.2;
+    cursor: pointer;
+}
+#header > .header_panel > .selected{
+    font-weight: bold;
+}
+
+.browseScreen__search {
+    display: flex;
+    align-items: center;
+    margin: 1.35rem 0rem 0.5rem 0rem;
+
+}
+.browseScreen__search .MuiSvgIcon-root {
+    font-size: 1.5rem;
+    color: #fff;
+    cursor: pointer;
+}
+.browseScreen__search > input {
+    background-color: #141414;
+    font-size: 0.9rem;
+    color: #fff;
+    outline: none;
+    transition: all 0.25s ease-out;
+    border: none;
+    padding: 0;
+    width: 0;
+}
+.browseScreen__search > .active {
+    border: 1px solid #fff;
+    padding: 0.45rem 0.5rem;
+    width: 15rem;
+}
+.browseScreen__dropdown {
+    margin: 1.35rem 3.5rem 0.5rem 1.5rem;
+    cursor: pointer;
+}
+.browseScreen__dropdown:hover > .browseScreen__menu{
+    opacity: 1;
+    z-index: 1;
+}
+.browseScreen__dropdown > img{
+    width: 2.25rem;
+    border-radius: 0.25rem;
+    margin: 0;
+    object-fit: contain;
+}
+.browseScreen__menu {
+    opacity: 0;
+    z-index: 20;
+    position: absolute;
+    top: 3.1rem;
+    right: 3.5rem;
+    background: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    font-size: 0.8rem;
+    border: 1px solid #69696979;
+    min-width: 10rem;
+    padding: 0.75rem 0;
+    transition: all 0.1s ease-in;
+}
+.browseScreen__menu > p{
+    font-weight: 600;
+    display: flex;
+    place-items: center;
+    padding: 0.1rem 0.25rem;
+    cursor: pointer;
+}
+.browseScreen__menu > p:hover{
+    text-decoration: underline;
+}
+@media (max-width: 1000px) {
+    #header > .header_panel > p {
+        font-size: 0.65rem;
+        margin: 1.35rem 0rem 0.5rem 0.5rem;
+    }
+    #header > .header_panel > .App-logo {
+        margin: 1.35rem 0.5rem 0.5rem 3.6rem;
+        object-fit: contain;
+        cursor: pointer;
+    }
+    .browseScreen__search > .active {
+        width: 8rem;
+    }
+    .browseScreen__search > input {
+        font-size: 0.65rem;
+
+    }
+}

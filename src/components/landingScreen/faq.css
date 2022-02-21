@@ -1,0 +1,97 @@
+.landingScreen__faqs {
+    width: 100%;
+    background-color: black;
+    padding-bottom: 50px;
+}
+.landingScreen__faqs >h1 {
+    color: white;
+    width: 100%;
+    text-align: center;
+    font-size: 3.125rem;
+    padding-top: 20px;
+}
+.landingScreen__faq {
+    width: 50%;
+    margin: 5px 25vw;
+    justify-content: center;
+}
+.landingScreen__faq > h1 {
+    color: white;
+    padding: 20px;
+    font-size: 1.7rem;
+    font-weight: normal;
+    margin-bottom: -25px;
+    background: #303030;
+}
+.landingScreen__faq > h2 {
+    overflow: hidden;
+    opacity: 0;
+    height: 0;
+}
+.landingScreen__faq > .expanded {
+    opacity: 1;
+    height: unset;
+    padding: 10px 20px;
+    color: white;
+    font-weight: normal;
+    font-size: 1.55rem;
+    background: #303030;
+}
+
+.landingScreen__FAQlogin{
+    padding-bottom: 5rem;
+}
+
+.landingScreen__FAQlogin > form {
+    display: flex;
+    padding-left: 25vw;
+    align-items: center;
+    align-self: center;
+}
+.landingScreen__FAQlogin > form> input {
+    padding: 10px;
+    height: 30px;
+    width: 36vw;
+    max-width: 600px;
+    border: none;
+    outline: none;
+    border-radius: 5px 0 0 5px;
+}
+.landingScreen__FAQlogin > form > button {
+    color: white;
+    height: 50px;
+    width: 12vw;
+    background-color: #e50914;
+    border: none;
+    font-size: 1.2rem;
+    border-radius: 0 5px 5px 0;
+    padding:8px 25px;
+    cursor: pointer;
+}
+
+.landingScreen__faqs >  .h3{
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 400;
+    font-family: "Helvetica Neue",sans-serif;
+    min-width: 700px;
+    text-align: center;
+    padding-top: 15px;
+
+}
+@media (max-width: 1000px) {
+    .landingScreen__faq {
+        width: 70%;
+        margin: 0 15%;
+    }
+    .landingScreen__faqs >  .h3{
+        font-size: 1rem;
+    }
+    .landingScreen__faq > h1 {
+        font-size: 1.4rem;
+    }
+    .landingScreen__faq > .expanded  {
+        font-size: 1.2rem;
+    }
+    }
+

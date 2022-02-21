@@ -1,0 +1,382 @@
+#show_container {
+    object-fit: contain;
+    width: 60%;
+    margin-right: 0.25rem;
+    z-index: 1;
+    transition: 0s all;
+    -webkit-tap-highlight-color: transparent;
+}
+#show_container:hover{
+    transition-delay: 500ms;
+    position: relative;
+    max-height: unset;
+    z-index: 2;
+    margin-right: 14.45rem;
+}
+#show_container:hover > #show_card {
+    transition-delay: 500ms;
+    position: absolute;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.75), 0 6px 6px rgba(0, 0, 0, 0.5);
+}
+#show_container:hover> #show_card > #show_details{
+    transition-delay: 500ms;
+    opacity: 1;
+    width: calc(100% - 1.5rem);
+    padding: 1rem 0.75rem;
+    border-radius: 0 0 0.25rem 0.25rem;
+}
+#show_container:hover> #show_card > #show_details > *{
+    transition-delay: 500ms;
+    display: inline-block;
+}
+
+#show_card {
+    cursor: pointer;
+    border-radius: 0.35rem 0.35rem 0.35rem 0.35rem;
+    transition: transform .25s, visibility .25s, box-shadow .25s ease-in;
+}
+
+.show_poster {
+    border-radius: 0.35rem;
+}
+
+#show_details {
+    opacity: 0;
+    width: 0;
+    padding: 0;
+    background: #111111;
+    font-size: 0.75rem;
+}
+#show_details > * {
+    display: none;
+}
+#show_title {
+    color: white;
+    font-weight: 400;
+    font-size: 1.05rem;
+    width: 100%;
+    height: 0;
+    background-color: red;
+
+}
+#show_buttons {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+}
+#show_buttons > div {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+#show_buttons > div > div {
+    color: white;
+    display: flex;
+    border-radius: 100px;
+    padding: 0.4rem 0.4rem 0.4rem 0.4rem;
+    margin: 0 0.18rem 0 0.18rem;
+    border:2px #919191 solid;
+}
+#show_buttons > div > div:hover {
+    border:2px white solid;
+}
+#show_buttons > div > div > *{
+    height: 1rem;
+    width: 1rem;
+}
+#show_buttons > div > div.play-icon {
+    background-color: white;
+    color: #141414;
+    display: flex;
+    border:2px white solid;
+}
+#show_buttons > div > div.right-icon {
+    align-self: flex-end;
+    margin-left: 0.8rem;
+ }
+
+#show_trailer {
+    height: 0;
+    width: 0;
+    opacity: 0;
+    border-radius: 0.35rem 0.35rem 0 0;
+}
+#show_trailer.trailer_visible {
+    height: 131px;
+    width: 228px;
+    opacity: 1;
+    border-radius: 0.35rem 0.35rem 0 0;
+}
+.trailer_video {
+    pointer-events: none;
+    border-radius: 0.35rem 0.35rem 0 0;
+}
+.trailer_visible > .trailer_video {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+    border-radius: 0.35rem 0.35rem 0 0;
+}
+.trailer_video iframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 253px;
+    width: 448px;
+    pointer-events: none;
+    z-index: 100;
+    transform: translate(-50%, -55%);
+    border-radius: 0.35rem 0.35rem 0 0;
+}
+
+#show_genres {
+    display: flex;
+    background-color: red;
+    height: 0;
+}
+#show_genre {
+    display: inline-block;
+}
+#show_genre > p {
+    font-size: 0.7rem;
+    height: 0;
+
+}
+#browseScreen__MuteContainer .MuiSvgIcon-root {
+    font-size: 1rem;
+    padding: 0.38rem;
+    border-radius: 50%;
+    border: 1px solid #ffffff9f;
+}
+
+#browseScreen__MuteContainer {
+    top: calc(120px - 2rem);
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 1rem;
+    color: #ffffff9f;
+    width: 2rem;
+    height: 2rem;
+    z-index: 100;
+    transition: all 0.35s;
+}
+.browseScreen__MuteContainer .MuiSvgIcon-root:hover {
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+@media (max-width: 1000px) {
+
+    #show_title {
+        font-size: 1.2rem;
+    }
+
+    #show_container:hover> #show_card > #show_details{
+        width: calc(100% - 1rem);
+        padding: 0.5rem 0.5rem 0.25rem;
+    }
+    #show_container:hover{
+        margin-right: 14.45rem;
+    }
+    #show_container {
+        object-fit: contain;
+        width: 60%;
+        margin-right: 0.25rem;
+        z-index: 1;
+        transition: 0s all;
+    }
+    #show_container:hover{
+        transition-delay: 500ms;
+        position: relative;
+        max-height: unset;
+        z-index: 2;
+        margin-right: 14.45rem;
+    }
+    #show_container:hover > #show_card {
+        transition-delay: 500ms;
+        position: absolute;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.75), 0 6px 6px rgba(0, 0, 0, 0.5);
+    }
+    #show_container:hover> #show_card > #show_details{
+    }
+    #show_container:hover> #show_card > #show_details > *{
+        transition-delay: 500ms;
+        display: inline-block;
+    }
+
+    #show_card {
+        cursor: pointer;
+        border-radius: 0.35rem 0.35rem 0.35rem 0.35rem;
+        transition: transform .25s, visibility .25s, box-shadow .25s ease-in;
+    }
+
+    .show_poster {
+        border-radius: 0.35rem;
+    }
+
+    #show_genre > p {
+        font-size: 0.7rem;
+    }
+
+}
+@media (max-width: 600px) {
+    #show_title {
+        font-size: 0.65rem;
+    }
+    br {
+        display: none !important;
+    }
+
+    #show_container:hover> #show_card > #show_details{
+        padding: 0.25rem 0.5rem 0.25rem;
+    }
+    #show_container:hover{
+        margin-right: 10.9rem;
+    }
+    #show_container:hover > #show_card {
+        transition-delay: 500ms;
+        position: absolute;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.75), 0 6px 6px rgba(0, 0, 0, 0.5);
+    }
+    #show_container:hover> #show_card > #show_details > *{
+        transition-delay: 500ms;
+        display: inline-block;
+    }
+
+    #show_card {
+        cursor: pointer;
+        border-radius: 0.35rem 0.35rem 0.35rem 0.35rem;
+        transition: transform .25s, visibility .25s, box-shadow .25s ease-in;
+    }
+
+    .show_poster {
+        border-radius: 0.35rem;
+    }
+
+    #show_details {
+        opacity: 0;
+        width: 0;
+        padding: 0;
+        background: #111111;
+        font-size: 0.75rem;
+    }
+    #show_details > * {
+        display: none;
+    }
+    #show_buttons {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+
+    }
+    #show_buttons > div {
+        display: flex;
+        width: 100%;
+        align-items: center;
+    }
+    #show_buttons > div > div {
+        color: white;
+        display: flex;
+        border-radius: 100px;
+        padding: 0.4rem 0.4rem 0.4rem 0.4rem;
+        margin: 0 0.18rem 0 0.18rem;
+        border:2px #919191 solid;
+    }
+    #show_buttons > div > div:hover {
+        border:2px white solid;
+    }
+    #show_buttons > div > div > *{
+        height: 1rem;
+        width: 1rem;
+    }
+    #show_buttons > div > div.play-icon {
+        background-color: white;
+        color: #141414;
+        display: flex;
+        border:2px white solid;
+    }
+    #show_buttons > div > div.right-icon {
+        align-self: flex-end;
+        margin-left: 0.8rem;
+    }
+
+    #show_trailer {
+        height: 0;
+        width: 0;
+        opacity: 0;
+        border-radius: 0.35rem 0.35rem 0 0;
+    }
+    #show_trailer.trailer_visible {
+        height: 131px;
+        width: 228px;
+        opacity: 1;
+        border-radius: 0.35rem 0.35rem 0 0;
+    }
+    .trailer_video {
+        pointer-events: none;
+        border-radius: 0.35rem 0.35rem 0 0;
+    }
+    .trailer_visible > .trailer_video {
+        position: relative;
+        overflow: hidden;
+        height: 100%;
+        width: 100%;
+        pointer-events: none;
+        border-radius: 0.35rem 0.35rem 0 0;
+    }
+    .trailer_video iframe {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        height: 253px;
+        width: 448px;
+        pointer-events: none;
+        z-index: 100;
+        transform: translate(-50%, -55%);
+        border-radius: 0.35rem 0.35rem 0 0;
+    }
+
+    #show_genres {
+        display: flex;
+        background-color: red;
+        height: 0;
+    }
+    #show_genre {
+        display: inline-block;
+    }
+    #show_genre > p {
+        font-size: 0.7rem;
+        height: 0;
+
+    }
+    #browseScreen__MuteContainer .MuiSvgIcon-root {
+        font-size: 1rem;
+        padding: 0.38rem;
+        border-radius: 50%;
+        border: 1px solid #ffffff9f;
+    }
+
+    #browseScreen__MuteContainer {
+        top: calc(120px - 2rem);
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        right: 1rem;
+        color: #ffffff9f;
+        width: 2rem;
+        height: 2rem;
+        z-index: 100;
+        transition: all 0.35s;
+    }
+    .browseScreen__MuteContainer .MuiSvgIcon-root:hover {
+        color: #fff;
+        border: 1px solid #fff;
+    }
+
+}
